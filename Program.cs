@@ -15,7 +15,18 @@ for(int x = 0; x < cant; x++)
 
         existe = productos.ContainsKey(id);
 
-        
+        if (existe == true)
+        {
+            Console.WriteLine("Ingrese el nombre del proucto: ");
+            string nombre = Console.ReadLine();
+
+            productos.Add(id, nombre);
+        }
+
+        else
+        {
+            Console.WriteLine("Ingreso un ID que ya existe. ");
+        }
     }
     while(!existe);
 }
